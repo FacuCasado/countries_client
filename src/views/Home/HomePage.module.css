@@ -1,0 +1,34 @@
+.homeDiv{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1em;
+    justify-content: center;
+    padding: 10px;
+}
+.loading{
+    height: 500px;
+    width: 600px;
+}
+.countries{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1em;
+    justify-content: center;
+    padding: 25px;
+}
+.filters{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1em;
+    justify-content: space-around;
+    padding: 25px;
+}
+.filterCards{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+

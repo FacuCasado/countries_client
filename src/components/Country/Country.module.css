@@ -1,0 +1,72 @@
+.countyDiv{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    align-items: center;
+    background-color:  rgba(100, 100, 100, .7);
+    min-width: 220px;
+    max-width: 220px;
+    min-height: 7em;
+    max-height: 10em;
+    overflow-wrap: break-word;
+    box-shadow: 0 0 71px 10px rgba(0, 0, 0, 0.479);
+    border-radius: 10px;
+    color: aliceblue;
+    animation:scale-up-horizontal-left 0.4s } @keyframes scale-up-horizontal-left{0%{transform:scaleX(.4);transform-origin:left center}100%{transform:scaleX(1);transform-origin:left center}
+
+}
+.countyDiv:hover{
+    box-shadow: 0px 0px 71px 10px rgb(255, 255, 255);
+    background-color:  rgba(105, 105, 105, 0.9);
+    transform: translateY(-3px);
+}
+.leftDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    height:fit-content;
+    padding-bottom: 1em;
+    margin-bottom: 0.5em;
+}
+.rightDiv{
+    display: flex;
+    justify-content: center;
+}
+.flag{
+    margin:0 auto 10px auto;
+    border-radius: 50%;
+    max-width:100px;
+    max-height: 90px;
+    transition:all cubic-bezier(0.215, 0.610, 0.355, 1) .5s;
+}
+.flag:hover{
+    transform: translateY(-3px);
+    border-radius: 0%;
+    
+}
+
+.name {
+    font-size: 16px;
+    white-space: normal;
+}
+
+.info{
+    cursor: pointer;
+  align-items: center;
+  padding: 6px 14px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
+  border-radius: 6px;
+  border: none;
+
+  background: #6E6D70;
+  box-shadow: 0px 0.5px 1px rgba(0, 0, 0, 0.1), inset 0px 0.5px 0.5px rgba(255, 255, 255, 0.5), 0px 0px 0px 0.5px rgba(0, 0, 0, 0.12);
+  color: #DFDEDF;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.info:focus {
+  box-shadow: inset 0px 0.8px 0px -0.25px rgba(255, 255, 255, 0.2), 0px 0.5px 1px rgba(0, 0, 0, 0.1), 0px 0px 0px 3.5px rgba(58, 108, 217, 0.5);
+  outline: 0;
+}

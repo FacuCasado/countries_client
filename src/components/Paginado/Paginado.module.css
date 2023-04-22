@@ -1,0 +1,39 @@
+.navDiv{
+  padding-bottom: .1em;
+}
+.button62{
+  width: 2em;
+  height: 2em;
+  text-align: center;
+  vertical-align: middle;
+  box-shadow: 0px 1px 0px 0px #1c1b18;
+  background:linear-gradient(to bottom, #ffffff 5%, #ccc2a6 100%);
+  background-color:#ffffff;
+  border-radius:.8em;
+  border:2px solid #333029;
+  cursor:pointer;
+  color:#505739;
+  font-family:Georgia;
+  font-size:15px;
+  font-weight:bold;
+  text-decoration:none;
+  text-shadow:0px 1px 0px #ffffff;
+  margin-right: .2em;
+}
+.button62:hover {
+	background:linear-gradient(to bottom, #ccc2a6 5%, #ffffff 100%);
+	background-color:#ccc2a6;
+}
+.button62:active {
+	position:relative;
+	top:1px;
+}
+.button62:focus {
+  opacity: 0.9;
+  background-color: #333029;
+  color:#757061
+}
+.button62:disabled {
+    opacity: 0.5;
+    cursor: not-allowed; /* Establece la opacidad deseada cuando el botón está deshabilitado */
+  }

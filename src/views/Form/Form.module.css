@@ -1,0 +1,171 @@
+.countryList{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1em;
+  padding: 25px;
+}
+.countries{
+  color: antiquewhite;
+  font-family: 'Courier New', Courier, monospace;
+  background-color: rgb(121, 121, 121);
+  padding-top: .2em;
+  padding-bottom: .2em;
+  padding-left: .5em;
+  padding-right: .5em;
+  width: max-content;
+  border-radius: 15px;
+  animation:jello-horizontal .9s linear both} @keyframes jello-horizontal{0%{transform:scale3d(1,1,1)}30%{transform:scale3d(1.25,.75,1)}40%{transform:scale3d(.75,1.25,1)}50%{transform:scale3d(1.15,.85,1)}65%{transform:scale3d(.95,1.05,1)}75%{transform:scale3d(1.05,.95,1)}100%{transform:scale3d(1,1,1)}
+}
+.cruz{
+  border-radius: 50%;
+  border: 1px groove black;
+  margin-left: .3em;
+}
+.cruz:hover{
+  cursor: pointer;
+}
+.button40 {
+  height: 2em;
+  width: 2.2em;
+  background-color: #111827;
+  border: 1px solid transparent;
+  border-radius: .75rem;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  flex: 0 0 auto;
+  font-family: "Inter var",ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-size: .9em;
+  line-height: .1em;
+  text-align: center;
+  text-decoration: none #6B7280 solid;
+  text-decoration-thickness: auto;
+  transition-duration: .2s;
+  transition-property: background-color,border-color,color,fill,stroke;
+  transition-timing-function: cubic-bezier(.4, 0, 0.2, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: auto;
+}
+
+.button40:hover {
+  background-color: #374151;
+  transform: translateY(-2px);
+}
+
+.button40:focus {
+  box-shadow: none;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+@media (min-width: 768px) {
+  .button40 {
+    padding: .75rem 1.5rem;
+  }
+}
+.buttonsDiv{
+  display: flex;
+  justify-content: center;
+  gap:1em;
+  padding-top: 1.5em;
+}
+.select{
+  margin-top: 1em;
+  padding-left: .8em;
+  padding-right: .8em;
+  height: 2em;
+  width: 1em;
+  background-color: #111827;
+  border: 1px solid transparent;
+  border-radius: .75rem;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  flex: 0 0 auto;
+  font-family: "Inter var",ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-size: .9em;
+  line-height: .1em;
+  text-align: center;
+  text-decoration: none #6B7280 solid;
+  text-decoration-thickness: auto;
+  transition-duration: .2s;
+  transition-property: background-color,border-color,color,fill,stroke;
+  transition-timing-function: cubic-bezier(.4, 0, 0.2, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: auto;
+}
+.select:hover {
+  background-color: #374151;
+}
+
+.select:focus {
+  box-shadow: none;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+.errorMessage{
+  font-size: .8em;
+  display: flex;
+  justify-content: center;
+  min-height: .8em;
+  max-height: .8em
+}
+.form{
+  font-family: 'Courier New', Courier, monospace;
+  margin-top: 2em;
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
+  background-color: rgba(107, 114, 128, 0.7); 
+  border-radius: 1em;
+  width:fit-content;
+  padding-left: 1em;
+  padding-right: 1em;
+  color:aliceblue;
+  animation:scale-up-center 0.2s; } @keyframes scale-up-center{ 0%{transform:scale(.5)} 100%{transform:scale(1)} 
+}
+.div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* Estilos para el input de tipo range */
+.range {
+  width: 10em;
+  height: 10%; /* altura de la barra */
+  background-color: #000000; /* color de fondo de la barra */
+  border-radius: 5px; /* redondear los bordes de la barra */ /* ocultar el desbordamiento del track */
+  overflow: visible;
+}
+
+/* Estilos para el track de la barra */
+.range::-webkit-slider-runnable-track {
+  width: 1em;
+  height: .6em;/* altura del track */
+  background-color: #111827; /* color del track */
+}
+
+/* Estilos para el pulgar de la barra */
+.range::-webkit-slider-thumb {
+  width: 20px; /* ancho del pulgar */
+  height: 20px; /* altura del pulgar */
+  background-color: #bcbcbd; /* color del pulgar */
+  border-radius: 50%; /* redondear los bordes del pulgar */
+  cursor: pointer; /* cambiar el cursor al pasar por encima del pulgar */
+  appearance: none; /* ocultar el estilo predeterminado del pulgar en Webkit */
+  color: azure;
+  margin-top: -3.5px;
+  margin-bottom: -8px;
+}
+
+/* Estilos para el pulgar de la barra cuando se está arrastrando */
+.range::-webkit-slider-thumb:active {
+  background-color: #bcbcbd; /* color del pulgar cuando se está arrastrando */
+}

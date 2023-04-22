@@ -1,0 +1,112 @@
+.button40 {
+    height: 2em;
+    width: 2.2em;
+    background-color: #111827;
+    border: 1px solid transparent;
+    border-radius: .75rem;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    flex: 0 0 auto;
+    font-family: "Inter var",ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-size: .9em;
+    line-height: .1em;
+    text-align: center;
+    text-decoration: none #6B7280 solid;
+    text-decoration-thickness: auto;
+    transition-duration: .2s;
+    transition-property: background-color,border-color,color,fill,stroke;
+    transition-timing-function: cubic-bezier(.4, 0, 0.2, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: auto;
+  }
+  
+  .button40:hover {
+    background-color: #374151;
+    transform: translateY(-2px);
+  }
+  
+  .button40:focus {
+    box-shadow: none;
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+  }
+  .actDiv{
+    padding-top: 2em;
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap:2em;
+    padding-bottom: 2em;
+  }
+  .countyDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+    align-items: center;
+    padding: 1em;
+    width: 5em;
+    background-color:  rgba(100, 100, 100, .7);
+    overflow-wrap: break-word;
+    box-shadow: 0 0 71px 10px rgba(0, 0, 0, 0.479);
+    border-radius: 10px;
+    color: aliceblue;
+    animation:scale-up-horizontal-left 0.4s } @keyframes scale-up-horizontal-left{0%{transform:scaleX(.4);transform-origin:left center}100%{transform:scaleX(1);transform-origin:left center}
+
+}
+.countyDiv:hover{
+    box-shadow: 0px 0px 71px 10px rgb(255, 255, 255);
+    background-color:  rgba(105, 105, 105, 0.9);
+    transform: translateY(-3px);
+}
+.cruz{
+    margin-top: .5em;
+    width: 2.6em;
+    height: 2em;
+    background-color: rgba(100, 100, 100, 0);
+    border-radius: 10px;
+    border: none;  
+    display: flex;
+    flex-direction: column; 
+    gap: .40rem;
+    justify-content: center;
+    cursor: pointer;
+     
+}
+.cruz:hover{
+    background-image: linear-gradient(to top right, #d82929, #ff0101);
+}
+.cruz:active{
+    background-image: linear-gradient(to top right, #000000, #ffffff);
+}
+
+
+.cruz>div{
+    background-color: #000000;
+    height: 2px;
+    width: 100%;
+    border-radius: 5px;
+    transition: all .5s;
+    transform-origin: left;
+}
+
+.cruz:hover div:first-child{
+    margin-left: 3.45px;
+    transform: rotate(45deg);
+}
+
+.cruz:hover div:nth-child(2){
+    opacity: 0;
+}
+
+.cruz:hover div:last-child{
+    margin-left: 3.45px;
+    transform: rotate(-45deg);
+}
+.link{
+    color: aliceblue;
+    margin-bottom: .2em;
+}
