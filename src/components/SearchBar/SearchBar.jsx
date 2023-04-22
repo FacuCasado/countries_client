@@ -13,11 +13,12 @@ function SearchBar(){
     }
     function handleButton(event){
         dispatch(getCountryByName(name))
+        setName("")
     }
 
     return(
         <div className={style.barDiv}>
-         <input type='search' placeholder="Where..." onChange={handleInputChange} className={style.input}/>
+         <input value={name}type='search' placeholder="Where..." onChange={handleInputChange} className={style.input}/>
          <button onClick={handleButton} className={style.button33}>Travel</button>
       </div>
     )
