@@ -7,6 +7,8 @@ import Detail from './views/Detail/Detail'
 import ActDetail from './views/ActDetail/ActDetail';
 import Form from './views/Form/Form';
 import Activities from './views/Activities/Activities';
+import axios from 'axios';
+axios.defaults.baseURL='http://localhost:3001/'
 
 
 function App() {
