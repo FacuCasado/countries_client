@@ -7,7 +7,9 @@ const initialState={
     CountryDetail:{},
     activities:[],
     allActivities:[],
-    ActivityDetail:{}
+    ActivityDetail:{},
+    filterActivity:'All',
+    filterContinent: 'All'
 }
 
 
@@ -22,7 +24,7 @@ function rootReducer(state=initialState, action){
             return{...state, CountryDetail:action.payload};
 
         case CLEAN_DETAIL:
-            return{...state, CountryDetail:{} }
+            return{...state, CountryDetail:{}, ActivityDetail:{} }
 
         case GET_COUNTRY_NAME:
             return{...state, countries:action.payload}
@@ -34,16 +36,21 @@ function rootReducer(state=initialState, action){
             return{...state, ActivityDetail:action.payload}
 
         case FILTER_BY_CONTINENT:
-            const continentFilter=action.payload==='All'?
+            let continentFilter=action.payload==='All'?
                 state.allCountries:
                 state.allCountries.filter((country)=>country.continent===action.payload)
-            return{...state, countries:continentFilter}
+            if(state.filterActivity!=='All'){
+                continentFilter=continentFilter.filter((country)=>country.activities.find((act)=>act.name===state.filterActivity))}
+            return{...state, countries:continentFilter, filterContinent:action.payload}
 
         case FILTER_BY_ACTIVITY:
-            const activityFilter=action.payload==='allAct'?
+            let activityFilter=action.payload==='All'?
                 state.allCountries.filter((country)=>country.activities&&country.activities.length>0):
                 state.allCountries.filter((country)=>country.activities&&country.activities.find((act)=>act.name===action.payload))
-            return{...state, countries:activityFilter}
+            if(state.filterContinent!=='All'){
+                activityFilter=activityFilter.filter((country)=>country.continent===state.filterContinent)}
+
+            return{...state, countries:activityFilter, filterActivity:action.payload}
 
         case SORT_BY_POPULATION:
             const populationSort=action.payload==='minPop'?

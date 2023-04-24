@@ -13,6 +13,7 @@ function Activities(){
     },[])
     function handleDelete(id){
         dispatch(deleteActivity(id))
+        alert("Activity deleted")
     }
     return(
         <div>

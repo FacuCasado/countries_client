@@ -1,9 +1,8 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
-import { getActivityDetail } from "../../Redux/countryActions";
+import { getActivityDetail, cleanDetail } from "../../Redux/countryActions";
 import style from './ActDetail.module.css';
-import { Link } from "react-router-dom";
 
 function ActDetail(){
     const {actName}=useParams();
@@ -16,6 +15,9 @@ function ActDetail(){
 
     useEffect(()=>{
         dispatch(getActivityDetail(actName))
+        return ()=>{
+            dispatch(cleanDetail())
+        }
     },[actName])
 
     const handleBackClick=()=>{

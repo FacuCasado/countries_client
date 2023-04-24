@@ -10,6 +10,7 @@ function SearchBar(){
 
     function handleInputChange(event){
         setName(event.target.value)
+        dispatch(getCountryByName(event.target.value))
     }
     function handleButton(event){
         dispatch(getCountryByName(name))
@@ -19,7 +20,7 @@ function SearchBar(){
     return(
         <div className={style.barDiv}>
          <input value={name}type='search' placeholder="Where..." onChange={handleInputChange} className={style.input}/>
-         <button onClick={handleButton} className={style.button33}>Travel</button>
+         {/* <button onClick={handleButton} className={style.button33}>Travel</button> */}
       </div>
     )
 }

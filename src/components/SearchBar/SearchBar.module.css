@@ -32,7 +32,7 @@
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
-  opacity: .7;
+  opacity: .9;
 }
 .input::placeholder {
   color: black; /* Cambiar el color del placeholder a negro */

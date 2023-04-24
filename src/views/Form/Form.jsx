@@ -58,10 +58,10 @@ function Form(){
         }
         const exist=allActivities.find((act)=>act.name===activity.name)
         if(exist){
-            return alert('Ya existe una actividad con ese nombre')
+            return alert('The activity name you provided already exists')
         }
         dispatch(postActivity(activity))
-        alert ('Actividad creada');
+        alert ('Activity created');
         setActivity({
             name: "",
             difficulty : "",

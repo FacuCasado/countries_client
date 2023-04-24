@@ -9,14 +9,14 @@
     top: 0;
     padding: 0;
     margin: 0;
-    color: #C8B6FF;
+    color: #000000;
     animation: text_713 3.5s ease both infinite;
     font-size: .8rem;
     letter-spacing: 1px;
   }
   
   .load {
-    background-color: #9A79FF;
+    background-color: #505050;
     border-radius: 50px;
     display: block;
     height: 16px;
