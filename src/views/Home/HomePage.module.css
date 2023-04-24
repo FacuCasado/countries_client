@@ -7,8 +7,9 @@
     padding: 10px;
 }
 .loading{
-    height: 500px;
-    width: 600px;
+    height: 20em;
+    width: 25em;
+    border-radius: 100%;
 }
 .countries{
     display: flex;
