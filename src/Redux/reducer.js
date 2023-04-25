@@ -1,4 +1,4 @@
-import { CLEAN_DETAIL, GET_ACTIVITIES, GET_ACTIVITY_DETAIL, GET_COUNTIRES, GET_COUNTRY_NAME, GET_DETAIL, ADD_ACTIVITY, DELETE_ACTIVITY } from "./countryActions";
+import { CLEAN_DETAIL, GET_ACTIVITIES, GET_ACTIVITY_DETAIL, GET_COUNTIRES, GET_COUNTRY_NAME, GET_DETAIL, ADD_ACTIVITY, DELETE_ACTIVITY, PUT_ACTIVITY } from "./countryActions";
 import {FILTER_BY_CONTINENT, SORT_BY_POPULATION, SORT_BY_ABC, FILTER_BY_ACTIVITY} from "./filterAction"
 
 const initialState={
@@ -70,6 +70,9 @@ function rootReducer(state=initialState, action){
         case DELETE_ACTIVITY:
             const updatedActivities=state.activities.filter((activity)=>activity.id!==action.payload);
             return {...state,activities:updatedActivities};
+        
+        case PUT_ACTIVITY:
+            return{...state}
             
         default: return {...state}
     }

@@ -5,6 +5,7 @@ import { getCountryByName } from "../../Redux/countryActions";
 import style from './SearchBar.module.css'
 
 function SearchBar(){
+
     const dispatch=useDispatch();
     const [name, setName]=useState("");
 

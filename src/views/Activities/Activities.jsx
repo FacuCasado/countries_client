@@ -22,7 +22,10 @@ function Activities(){
                     <div className={style.countyDiv}>
                     <button className={style.cruz}onClick={()=>handleDelete(activity.id)}><div ></div>
                         <div ></div><div ></div></button>
-                    <h5>{activity.name}</h5>
+                        <h5>{activity.name}</h5>
+                    <Link className={style.edit}key={activity.id} to={{
+                                pathname: `/form`,
+                                search: `id=${activity.id}&name=${activity.name}&dificulty=${activity.dificulty}&duration=${activity.duration}&season=${activity.season}&countries=${JSON.stringify(activity.countries)}`}}>Edit</Link>
                     <Link className={style.link}to={`/activities/${activity.name}`}>Detail</Link>
                     </div>
                 ))}  

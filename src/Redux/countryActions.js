@@ -8,6 +8,7 @@ export const GET_ACTIVITY_DETAIL="GET_ACTIVITY_DETAIL"
 export const GET_COUNTRY_NAME="GET_COUNTRY_NAME"
 export const ADD_ACTIVITY="ADD_ACTIVITY"
 export const DELETE_ACTIVITY="DELETE_ACTIVITY"
+export const PUT_ACTIVITY="PUT_ACTIVITY"
 
 
 
@@ -127,4 +128,25 @@ export const deleteActivity=(id)=>{
         }
     }
     
+}
+
+export const putActivity=(payload)=>{
+    const activity= {
+        id:payload.id,
+        name:payload.name,
+        dificulty:payload.difficulty,
+        duration:payload.duration,
+        season:payload.season,
+        country:payload.countries
+    };
+    return async function(dispatch){
+        try {
+            await axios.put('/activities', activity)
+            return dispatch({
+                type:PUT_ACTIVITY,
+            })
+        } catch (error) {
+            return {error: error.message}
+        }
+    }
 }

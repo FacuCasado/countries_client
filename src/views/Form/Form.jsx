@@ -1,16 +1,31 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getActivities, getCountries, postActivity } from "../../Redux/countryActions";
+import { getActivities, getCountries, postActivity, putActivity } from "../../Redux/countryActions";
 import style from './Form.module.css'
 import inputValidations from "./inputValidations";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 function Form(){
 
+    const navigate=useNavigate()
     const dispatch=useDispatch();
     const countries=useSelector((state)=>state.countries)
     const allActivities=useSelector((state)=>state.activities)
+
+    const location=useLocation();
+    const searchParams=new URLSearchParams(location.search);
+    const actId=searchParams.get('id');
+    const actName=searchParams.get('name')
+    const actDificulty=searchParams.get('dificulty')
+    const actDuration=searchParams.get('duration')
+    const actSeason=searchParams.get('season')
+
+    const countriesString = searchParams.get('countries');
+    const countriesArray = JSON.parse(countriesString);
+    const countryNames = countriesArray?.map(country => country.name);
+
     const [activity, setActivity] = useState({
+        id:"",
         name: "",
         difficulty: "",
         duration: "",
@@ -19,10 +34,17 @@ function Form(){
     });
     const [error, setError] = useState({});
 
+
+
     useEffect(()=>{
         dispatch(getCountries())
         dispatch(getActivities())
-    },[])
+        if(actId){
+            setActivity({id:actId,name:actName,difficulty:actDificulty,duration:actDuration,season:actSeason,countries:countryNames})
+        }else{
+            setActivity({id:"",name:"",difficulty:"",duration:"",season:"",countries: []})
+        }
+    },[actId])
 
     const handleInput=(event)=>{
         const property = event.target.name;
@@ -56,19 +78,28 @@ function Form(){
         if(error && Object.keys(error).length > 0){
             return alert ('The form has an error.')
         }
-        const exist=allActivities.find((act)=>act.name===activity.name)
-        if(exist){
-            return alert('The activity name you provided already exists')
-        }
-        dispatch(postActivity(activity))
-        alert ('Activity created');
-        setActivity({
+        if(actId){
+            console.log(activity);
+               dispatch(putActivity(activity)) 
+               alert ('Activity updated'); 
+               navigate('/activities')  
+        }else{
+            const exist=allActivities.find((act)=>act.name===activity.name)
+            if(exist){
+                return alert('The activity name you provided already exists')
+            }
+            dispatch(postActivity(activity))
+            alert ('Activity created'); 
+            setActivity({
             name: "",
             difficulty : "",
             duration:"",
             season : "",
-            countries :[]
+            countries :[""]
         })
+        }
+        
+        
     };
 
     const handleDelete = (event) => {
