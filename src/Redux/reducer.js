@@ -1,5 +1,5 @@
 import { CLEAN_DETAIL, GET_ACTIVITIES, GET_ACTIVITY_DETAIL, GET_COUNTIRES, GET_COUNTRY_NAME, GET_DETAIL, ADD_ACTIVITY, DELETE_ACTIVITY, PUT_ACTIVITY } from "./countryActions";
-import {FILTER_BY_CONTINENT, SORT_BY_POPULATION, SORT_BY_ABC, FILTER_BY_ACTIVITY} from "./filterAction"
+import {FILTER_BY_CONTINENT, SORT_BY_POPULATION, SORT_BY_ABC, FILTER_BY_ACTIVITY, RELOAD_FILTERS} from "./filterAction"
 
 const initialState={
     countries:[],
@@ -34,6 +34,9 @@ function rootReducer(state=initialState, action){
 
         case GET_ACTIVITY_DETAIL:
             return{...state, ActivityDetail:action.payload}
+
+        case RELOAD_FILTERS:
+            return{...state,filterActivity:'All',filterContinent: 'All' }
 
         case FILTER_BY_CONTINENT:
             let continentFilter=action.payload==='All'?

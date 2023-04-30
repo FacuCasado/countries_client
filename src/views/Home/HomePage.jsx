@@ -8,20 +8,17 @@ import loading from '../../xutils/avionmundo.gif'
 import Paginado from "../../components/Paginado/Paginado";
 import Filters from "../../components/Filters/Filters";
 
-function HomePage(){
+function HomePage({paginado, countriesPerPage, currentPage, currentCountries}){
 
     const dispatch=useDispatch();
     const allCountries= useSelector((state)=>state.countries) //trae todos los paises del estado global
 
-    //*--------Paginado--------
-    const [currentPage, setCurrentPage]=useState(1);//pagina actual
-    const [countriesPerPage, setCountriesPerPage]=useState(10);//paises por pagina
-    const indexOfLastCountry = currentPage*countriesPerPage;//indice del ultimo pais de la pag
-    const indexOfFirstCountry = indexOfLastCountry-countriesPerPage;//indice del primer pais de la pag
-    const currentCountries=allCountries.slice(indexOfFirstCountry,indexOfLastCountry)//saco los paises a mostrar por pagina
-    const paginado=(pageNumber)=>{ //funcion que establece la pagina actual
-        setCurrentPage(pageNumber)
-    }
+    // //*--------Paginado--------
+    // const [currentPage, setCurrentPage]=useState(1);//pagina actual
+    // const [countriesPerPage, setCountriesPerPage]=useState(10);//paises por pagina
+    // const indexOfLastCountry = currentPage*countriesPerPage;//indice del ultimo pais de la pag
+    // const indexOfFirstCountry = indexOfLastCountry-countriesPerPage;//indice del primer pais de la pag
+    // const currentCountries=allCountries.slice(indexOfFirstCountry,indexOfLastCountry)//saco los paises a mostrar por pagina
     
     useEffect(()=>{ //Cuando se monta el componente despacha getCountries que lleva todos los paises al estado global
         dispatch(getCountries())

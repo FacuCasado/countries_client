@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 import SearchBar from "../SearchBar/SearchBar";
 import style from "./Nav.module.css"
 
-function Nav(){
+function Nav({paginado}){
     return(
        <div className={style.navDiv}>
-            <SearchBar/>
+            <SearchBar paginado={paginado}/>
 
             <Link to='/activities'>
             <button className={style.button33}>Activities</button>

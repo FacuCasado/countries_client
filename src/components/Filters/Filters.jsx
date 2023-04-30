@@ -1,7 +1,7 @@
 import React from "react";
 import { useDispatch, useSelector} from "react-redux";
 import { getCountries } from "../../Redux/countryActions";
-import { filterByActivity, filterByContinent, sortByABC, sortByPopulation } from "../../Redux/filterAction";
+import { filterByActivity, filterByContinent, reloadFilters, sortByABC, sortByPopulation } from "../../Redux/filterAction";
 import style from './Filters.module.css'
 import { useState } from "react";
 
@@ -26,6 +26,7 @@ function Filters({paginado}){
     function handleReload(){
         paginado(1)
         setFilters(initialFilters)
+        dispatch(reloadFilters())
         dispatch(getCountries())
     }
 

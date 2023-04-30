@@ -14,7 +14,7 @@ function Paginado({countriesPerPage,allCountries,paginado, currentPage}){
                 <button  className={style.button62} onClick={()=>{paginado(currentPage-1)}} disabled={currentPage === 1}>&#8249;</button>
                 {pageNumbers && 
                 pageNumbers.map((num)=>(
-                    <button  className={style.button62} onClick={()=>{paginado(num)}} key={num}>
+                    <button  className={num===currentPage?style.buttonActive:style.button62} onClick={()=>{paginado(num)}} key={num}>
                     {num}
                     </button>
                 ))}

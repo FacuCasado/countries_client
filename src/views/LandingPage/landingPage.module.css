@@ -9,11 +9,10 @@
     background-size: cover;
     color:antiquewhite;
     position: absolute;
-    right: 0;
-    left: 0;
+    top: 0; bottom: 0; left: 0; right: 0;
 }
 .title {
-    font-size: 60px;
+    font-size: 5vw;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     margin-top: 100px;
     margin-bottom: 130px;
@@ -83,7 +82,7 @@ width: 8em;
   justify-content: center;
   height: 1em;
   width: 1em;
-  margin-bottom: 10px;
+  margin-bottom: 1em;
 }
 .logos{
   display: flex;

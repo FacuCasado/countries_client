@@ -4,13 +4,14 @@ import { useDispatch } from "react-redux"
 import { getCountryByName } from "../../Redux/countryActions";
 import style from './SearchBar.module.css'
 
-function SearchBar(){
+function SearchBar({paginado}){
 
     const dispatch=useDispatch();
     const [name, setName]=useState("");
 
     function handleInputChange(event){
         setName(event.target.value)
+        paginado(1)
         dispatch(getCountryByName(event.target.value))
     }
     function handleButton(event){

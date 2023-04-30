@@ -4,7 +4,7 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 1em;
-  padding: 25px;
+  padding: 1.5em;
 }
 .countries{
   color: antiquewhite;
@@ -15,7 +15,7 @@
   padding-left: .5em;
   padding-right: .5em;
   width: max-content;
-  border-radius: 15px;
+  border-radius: 1em;
   animation:jello-horizontal .9s linear both} @keyframes jello-horizontal{0%{transform:scale3d(1,1,1)}30%{transform:scale3d(1.25,.75,1)}40%{transform:scale3d(.75,1.25,1)}50%{transform:scale3d(1.15,.85,1)}65%{transform:scale3d(.95,1.05,1)}75%{transform:scale3d(1.05,.95,1)}100%{transform:scale3d(1,1,1)}
 }
 .cruz{
@@ -110,6 +110,7 @@
   outline-offset: 2px;
 }
 .errorMessage{
+  color: red;
   font-size: .8em;
   display: flex;
   justify-content: center;
@@ -122,6 +123,7 @@
   padding-top: 1.5em;
   padding-bottom: 1.5em;
   background-color: rgba(107, 114, 128, 0.7); 
+  backdrop-filter: blur(.2em);
   border-radius: 1em;
   width:fit-content;
   padding-left: 1em;
@@ -154,15 +156,15 @@
 
 /* Estilos para el pulgar de la barra */
 .range::-webkit-slider-thumb {
-  width: 20px; /* ancho del pulgar */
-  height: 20px; /* altura del pulgar */
+  width: 1.8em; /* ancho del pulgar */
+  height: 1.8em; /* altura del pulgar */
   background-color: #bcbcbd; /* color del pulgar */
   border-radius: 50%; /* redondear los bordes del pulgar */
   cursor: pointer; /* cambiar el cursor al pasar por encima del pulgar */
   appearance: none; /* ocultar el estilo predeterminado del pulgar en Webkit */
   color: azure;
-  margin-top: -3.5px;
-  margin-bottom: -8px;
+  margin-top: -.3em;
+  margin-bottom: -.5em;
 }
 
 /* Estilos para el pulgar de la barra cuando se está arrastrando */

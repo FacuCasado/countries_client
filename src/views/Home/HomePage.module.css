@@ -4,7 +4,7 @@
     flex-wrap: wrap;
     gap: 1em;
     justify-content: center;
-    padding: 10px;
+    padding: .6em;
 }
 .loading{
     height: 20em;
@@ -17,7 +17,7 @@
     flex-wrap: wrap;
     gap: 1em;
     justify-content: center;
-    padding: 25px;
+    padding: 1.5em;
 }
 .filters{
     display: flex;
@@ -25,7 +25,7 @@
     flex-wrap: wrap;
     gap: 1em;
     justify-content: space-around;
-    padding: 25px;
+    padding: 1.5em;
 }
 .filterCards{
     display: flex;
